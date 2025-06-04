@@ -1,6 +1,7 @@
 import Navigation from "../../ui/Navigation";
 import * as data from "../../../data/data.json";
 import { useState } from "react";
+import CrewPagination from "./CrewPagination";
 const { crew } = data;
 
 function Crew() {
@@ -34,42 +35,7 @@ function Crew() {
             {crew[currentCrew].bio}
           </p>
         </div>
-        <aside>
-          <ul className="flex gap-4">
-            <li
-              data-id="0"
-              onClick={handleClick}
-              className={
-                "cursor-pointer size-2.5 rounded-full " +
-                (currentCrew === "0" ? "bg-(--white)" : "bg-(--blue-light)/70")
-              }
-            ></li>
-            <li
-              data-id="1"
-              onClick={handleClick}
-              className={
-                "cursor-pointer size-2.5 rounded-full " +
-                (currentCrew === "1" ? "bg-(--white)" : "bg-(--blue-light)/70")
-              }
-            ></li>
-            <li
-              data-id="2"
-              onClick={handleClick}
-              className={
-                "cursor-pointer size-2.5 rounded-full " +
-                (currentCrew === "2" ? "bg-(--white)" : "bg-(--blue-light)/70")
-              }
-            ></li>
-            <li
-              data-id="3"
-              onClick={handleClick}
-              className={
-                "cursor-pointer size-2.5 rounded-full " +
-                (currentCrew === "3" ? "bg-(--white)" : "bg-(--blue-light)/70")
-              }
-            ></li>
-          </ul>
-        </aside>
+        <CrewPagination onClick={handleClick} currentCrew={currentCrew} />
         <picture className="px-10 py-5">
           <source srcSet={crew[currentCrew].images.webp} type="image/webp" />
           <img
