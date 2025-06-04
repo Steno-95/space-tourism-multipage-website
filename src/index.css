@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --blue-light: #d0d6f9;
+  --blue-dark: #0b0d17;
+
+  --white: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  html {
+    font-size: clamp(0.8em, 0.4em + 1.5vw, 1.4em);
+  }
+
+  body {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+@layer components {
+  .home-bg {
+    @apply bg-(url("/home/background-home-mobile"));
+  }
+}
