@@ -2,6 +2,7 @@ import Navigation from "../../ui/Navigation";
 import * as data from "../../../data/data.json";
 import { useState } from "react";
 import CrewPagination from "./CrewPagination";
+import PageTitle from "../../ui/PageTitle";
 const { crew } = data;
 
 function Crew() {
@@ -15,15 +16,8 @@ function Crew() {
   return (
     <div className="crew-bg brightness-90">
       <Navigation style={"bg-backdrop-filter"} />
-      <main className="flex flex-col gap-8 items-center site-padding bg-backdrop-filter">
-        <h1 className="flex gap-5 font-(family-name:--fn-barlow) mb-8">
-          <span className="text-(--blue-light)/30 font-bold tracking-[0.2em]">
-            02
-          </span>
-          <span className="uppercase text-(--white) tracking-[0.1em]  font-light">
-            meet your crew
-          </span>
-        </h1>
+      <main className="page-container  gap-8 site-padding bg-backdrop-filter">
+        <PageTitle number={"02"} title={"meet your crew"} />
         <div className="flex flex-col items-center text-center mb-8">
           <span className="font-(family-name:--fn-bellefair) text-(--blue-light)/40 uppercase text-[1.4rem]">
             {crew[currentCrew].role}

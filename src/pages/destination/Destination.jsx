@@ -2,6 +2,7 @@ import Navigation from "../../ui/Navigation";
 import DestinationNav from "./DestinationNav";
 import * as data from "../../../data/data.json";
 import { useState } from "react";
+import PageTitle from "../../ui/PageTitle";
 const { destinations } = data;
 
 function Destination() {
@@ -15,15 +16,8 @@ function Destination() {
   return (
     <div className="dest-bg brightness-120">
       <Navigation style={"bg-backdrop-filter"} />
-      <main className="flex flex-col gap-5 items-center site-padding bg-backdrop-filter">
-        <h1 className="flex gap-5 font-(family-name:--fn-barlow)">
-          <span className="text-(--blue-light)/30 font-bold tracking-[0.2em]">
-            01
-          </span>
-          <span className="uppercase text-(--white) tracking-[0.1em]  font-light">
-            pick your destination
-          </span>
-        </h1>
+      <main className="page-container gap-5 site-padding bg-backdrop-filter">
+        <PageTitle number={"01"} title={"pick your destination"} />
         <picture className="py-10">
           <source
             srcSet={destinations[currentDest].images.webp}
