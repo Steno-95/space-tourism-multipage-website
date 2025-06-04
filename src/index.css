@@ -44,6 +44,10 @@
     @apply flex justify-between items-center w-full p-5;
   }
 
+  .page-container {
+    @apply flex flex-col items-center;
+  }
+
   .dest-description {
     @apply text-(--blue-light) uppercase tracking-[0.2em] text-[1rem] font-(family-name:--fn-barlow) font-extralight;
   }
