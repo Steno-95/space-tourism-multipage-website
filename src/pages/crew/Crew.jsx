@@ -35,7 +35,6 @@ function Crew() {
           <img
             src={crew[currentCrew].images.png}
             alt={crew[currentCrew].name + " photo"}
-            className=""
           />
         </picture>
       </main>
