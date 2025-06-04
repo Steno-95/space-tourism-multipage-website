@@ -1,48 +1,64 @@
 import Navigation from "../../ui/Navigation";
 import DestinationNav from "./DestinationNav";
+import * as data from "../../../data/data.json";
+import { useState } from "react";
+const { destinations } = data;
 
 function Destination() {
+  const [currentDest, setCurrentDest] = useState("0");
+
+  function handleClick(e) {
+    console.log(e.currentTarget.getAttribute("data-id"));
+    if (e.currentTarget.getAttribute("data-id"))
+      setCurrentDest(e.currentTarget.getAttribute("data-id"));
+  }
   return (
     <div className="dest-bg brightness-120">
       <Navigation style={"bg-backdrop-filter"} />
       <main className="flex flex-col gap-5 items-center site-padding bg-backdrop-filter">
-        <h1 className="flex gap-5">
-          <span className="text-(--blue-light)/20 font-bold tracking-widest">
+        <h1 className="flex gap-5 font-(family-name:--fn-barlow)">
+          <span className="text-(--blue-light)/30 font-bold tracking-[0.2em]">
             01
           </span>
-          <span className="uppercase text-(--white)">
+          <span className="uppercase text-(--white) tracking-[0.1em]  font-light">
             pick your destination
           </span>
         </h1>
         <picture className="py-10">
+          <source
+            srcSet={destinations[currentDest].images.webp}
+            type="image/webp"
+          />
           <img
-            src="/destination/image-moon.png"
-            alt="moon picture"
+            src={destinations[currentDest].images.png}
+            alt={destinations[currentDest].name + " photo"}
             className="size-45"
           />
         </picture>
         <div className="flex flex-col items-center gap-5">
-          <DestinationNav />
+          <DestinationNav onClick={handleClick} />
           <article className="text-center">
             <h2 className="text-(--white) uppercase text-[5rem] font-(family-name:--fn-bellefair)">
-              Moon
+              {destinations[currentDest].name}
             </h2>
             <p className="text-(--blue-light) text-[1.2rem] leading-8 mt-5">
-              See our planet as you've never seen it before. A perfect relaxing
-              trip away to help regain perspective and come back refreshed.
-              While you're there, take in some history by visiting the Luna 2
-              and Apollo 11 landing sites.
+              {destinations[currentDest].description}
             </p>
           </article>
         </div>
         <aside className=" border-t-2 border-t-(--blue-light)/20 w-full text-center flex flex-col gap-5 pt-5">
           <div>
             <h3 className="dest-description">Avg. distance</h3>
-            <span className="dest-value">384,400 km</span>
+            <span className="dest-value">
+              {destinations[currentDest].distance}
+            </span>
           </div>
           <div>
             <h3 className="dest-description">Est. travel time</h3>
-            <span className="dest-value">3 days</span>
+            <span className="dest-value">
+              {" "}
+              {destinations[currentDest].travel}
+            </span>
           </div>
         </aside>
       </main>
