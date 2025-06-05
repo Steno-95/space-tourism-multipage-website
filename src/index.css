@@ -54,6 +54,22 @@
   .dest-value {
     @apply uppercase text-(--white) text-[1.8rem] font-(family-name:--fn-bellefair);
   }
+
+  .active-dest {
+    @apply text-(--white) relative;
+  }
+
+  .active-dest::after {
+    content: "";
+    width: 80%;
+    height: 0.2rem;
+    background-color: var(--white);
+    position: absolute;
+    left: 49%;
+    transform: translateX(-51%);
+    bottom: -50%;
+    border-radius: 0.3rem;
+  }
 }
 
 @layer utilities {
