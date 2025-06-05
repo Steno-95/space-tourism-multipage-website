@@ -9,7 +9,6 @@ function Crew() {
   const [currentCrew, setCurrentCrew] = useState("0");
 
   function handleClick(e) {
-    console.log(e.currentTarget.getAttribute("data-id"));
     if (e.currentTarget.getAttribute("data-id"))
       setCurrentCrew(e.currentTarget.getAttribute("data-id"));
   }
@@ -30,12 +29,13 @@ function Crew() {
           </p>
         </div>
         <CrewPagination onClick={handleClick} currentCrew={currentCrew} />
-        <picture className="px-10 py-5">
+        <picture className="crew-picture">
           <source srcSet={crew[currentCrew].images.webp} type="image/webp" />
           <img
             src={crew[currentCrew].images.png}
             alt={crew[currentCrew].name + " photo"}
           />
+          <div className="blur-bg"></div>
         </picture>
       </main>
     </div>
