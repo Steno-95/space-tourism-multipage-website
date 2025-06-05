@@ -10,23 +10,28 @@ function Navigation({ style }) {
         <img src="/shared/logo.svg" />
       </figure>
       {isDesktop && (
-        <ul className=" text-white flex gap-5 uppercase">
+        <ul className=" text-(--white)/70 flex gap-5 uppercase tracking-widest font-(family-name:--fn-barlow)">
           <li>
-            <Link to="/">home</Link>
+            <Link to="/">
+              {" "}
+              <span className="font-semibold text-(--white) mr-2">00</span>home
+            </Link>
           </li>
           <li>
             <Link to="/destination">
-              <span className="font-semibold mr-2">01</span>destination
+              <span className="font-semibold text-(--white) mr-2">01</span>
+              destination
             </Link>
           </li>
           <li>
             <Link to="/crew">
-              <span className="font-semibold mr-2">02</span>crew
+              <span className="font-semibold text-(--white) mr-2">02</span>crew
             </Link>
           </li>
           <li>
             <Link to="/technology">
-              <span className="font-semibold mr-2">03</span>technology
+              <span className="font-semibold text-(--white) mr-2">03</span>
+              technology
             </Link>
           </li>
         </ul>
