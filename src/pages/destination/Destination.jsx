@@ -30,7 +30,7 @@ function Destination() {
           />
         </picture>
         <div className="flex flex-col items-center gap-5">
-          <DestinationNav onClick={handleClick} />
+          <DestinationNav onClick={handleClick} currentDest={currentDest} />
           <article className="text-center">
             <h2 className="text-(--white) uppercase text-[5rem] font-(family-name:--fn-bellefair)">
               {destinations[currentDest].name}
