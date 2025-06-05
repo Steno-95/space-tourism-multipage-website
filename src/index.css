@@ -70,6 +70,20 @@
     bottom: -50%;
     border-radius: 0.3rem;
   }
+
+  .crew-picture {
+    @apply px-15 py-5 relative z-1 overflow-hidden;
+  }
+  .blur-bg {
+    background: var(--blue-dark);
+    width: 80%;
+    height: 2rem;
+    position: absolute;
+    bottom: 0.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    @apply blur-sm brightness-160;
+  }
 }
 
 @layer utilities {
