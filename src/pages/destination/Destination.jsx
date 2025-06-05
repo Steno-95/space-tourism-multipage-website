@@ -9,7 +9,6 @@ function Destination() {
   const [currentDest, setCurrentDest] = useState("0");
 
   function handleClick(e) {
-    console.log(e.currentTarget.getAttribute("data-id"));
     if (e.currentTarget.getAttribute("data-id"))
       setCurrentDest(e.currentTarget.getAttribute("data-id"));
   }
