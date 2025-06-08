@@ -1,6 +1,10 @@
 function PageTitle({ number, title, style = "" }) {
   return (
-    <h1 className={"flex gap-5 font-(family-name:--fn-barlow) mb-8 " + style}>
+    <h1
+      className={
+        "flex gap-5 font-(family-name:--fn-barlow) mb-8 md:pl-20 " + style
+      }
+    >
       <span className="text-(--blue-light)/30 font-bold tracking-[0.2em]">
         {number}
       </span>
