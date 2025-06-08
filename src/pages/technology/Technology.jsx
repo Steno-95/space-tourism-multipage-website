@@ -15,13 +15,9 @@ function Technology() {
   return (
     <div className="tech-bg">
       <div className="bg-backdrop-filter min-h-screen">
-        <Navigation style={""} />
+        <Navigation />
         <main className="page-container gap-5 site-padding lg:items-start overflow-hidden">
-          <PageTitle
-            number={"03"}
-            title={"space launch 101"}
-            style={"md:pl-20"}
-          />
+          <PageTitle number={"03"} title={"space launch 101"} />
           <section className="page-container gap-5 lg:flex-row lg:min-w-screen lg:pl-25 lg:gap-8 2xl:pl-10">
             <picture className="w-screen portrait:h-[18rem]  md:h-full overflow-hidden lg:order-1 lg:w-auto">
               <source
