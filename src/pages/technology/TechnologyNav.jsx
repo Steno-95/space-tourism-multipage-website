@@ -1,6 +1,6 @@
 function TechnologyNav({ currentTech, handleClick }) {
   return (
-    <ul className="flex gap-5 items-center justify-center text-center font-(family-name:--fn-bellefair)">
+    <ul className="flex gap-5 items-center justify-center text-center font-(family-name:--fn-bellefair) lg:flex-col">
       <li
         className={
           " rounded-full border-1 border-white/10 text-[1.3rem] " +
@@ -10,7 +10,7 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
-          className="cursor-pointer size-10 pt-1"
+          className="2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1"
           onClick={handleClick}
           data-id="0"
         >
@@ -26,7 +26,7 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
-          className="cursor-pointer size-10 pt-1"
+          className="2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1"
           onClick={handleClick}
           data-id="1"
         >
@@ -42,7 +42,7 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
-          className="cursor-pointer size-10 pt-1"
+          className="2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1"
           onClick={handleClick}
           data-id="2"
         >
