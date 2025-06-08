@@ -4,7 +4,6 @@ import useScreenSize from "../hooks/useScreenSize";
 function Navigation({ style }) {
   const isDesktop = useScreenSize();
   const path = window.location.pathname;
-  console.log(path);
   const { openMenu, isOpen } = useOutletContext();
   return (
     <nav className={"navigation " + style}>
