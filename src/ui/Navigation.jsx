@@ -3,6 +3,8 @@ import useScreenSize from "../hooks/useScreenSize";
 
 function Navigation({ style }) {
   const isDesktop = useScreenSize();
+  const path = window.location.pathname;
+  console.log(path);
   const { openMenu, isOpen } = useOutletContext();
   return (
     <nav className={"navigation " + style}>
@@ -13,25 +15,25 @@ function Navigation({ style }) {
         />
       </figure>
       {isDesktop && (
-        <ul className=" text-(--white)/70 flex gap-5 uppercase tracking-widest font-(family-name:--fn-barlow)">
-          <li>
+        <ul className="navigation-list">
+          <li className={path === "/" || path === "/home" ? "active-page" : ""}>
             <Link to="/">
               {" "}
               <span className="font-semibold text-(--white) mr-2">00</span>home
             </Link>
           </li>
-          <li>
+          <li className={path === "/destination" ? "active-page" : ""}>
             <Link to="/destination">
               <span className="font-semibold text-(--white) mr-2">01</span>
               destination
             </Link>
           </li>
-          <li>
+          <li className={path === "/crew" ? "active-page" : ""}>
             <Link to="/crew">
               <span className="font-semibold text-(--white) mr-2">02</span>crew
             </Link>
           </li>
-          <li>
+          <li className={path === "/technology" ? "active-page" : ""}>
             <Link to="/technology">
               <span className="font-semibold text-(--white) mr-2">03</span>
               technology
