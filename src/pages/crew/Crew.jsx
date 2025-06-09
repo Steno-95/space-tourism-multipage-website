@@ -16,8 +16,8 @@ function Crew() {
     <div className="crew-bg">
       <div className="bg-backdrop-filter min-h-screen">
         <Navigation style={""} />
-        <main className="page-container site-padding ">
-          <section className="lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_4fr_1fr] lg:pl-20 flex flex-col items-center ">
+        <main className="page-container site-padding md:pb-0! lg:p-10!">
+          <section className="lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_4fr_1fr] lg:pl-20 flex flex-col items-center max-h-screen">
             <PageTitle
               number={"02"}
               title={"meet your crew"}
