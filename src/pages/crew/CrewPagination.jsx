@@ -1,12 +1,12 @@
 function CrewPagination({ onClick, currentCrew }) {
   return (
-    <aside>
+    <aside className="lg:mt-20 lg:justify-self-start lg:self-end">
       <ul className="flex gap-4">
         <li
           data-id="0"
           onClick={onClick}
           className={
-            "cursor-pointer size-2.5 rounded-full " +
+            "cursor-pointer size-2.5 xl:size-3 rounded-full " +
             (currentCrew === "0" ? "bg-(--white)" : "bg-(--blue-light)/70")
           }
         ></li>
@@ -14,7 +14,7 @@ function CrewPagination({ onClick, currentCrew }) {
           data-id="1"
           onClick={onClick}
           className={
-            "cursor-pointer size-2.5 rounded-full " +
+            "cursor-pointer size-2.5 xl:size-3 rounded-full " +
             (currentCrew === "1" ? "bg-(--white)" : "bg-(--blue-light)/70")
           }
         ></li>
@@ -22,7 +22,7 @@ function CrewPagination({ onClick, currentCrew }) {
           data-id="2"
           onClick={onClick}
           className={
-            "cursor-pointer size-2.5 rounded-full " +
+            "cursor-pointer size-2.5 xl:size-3 rounded-full " +
             (currentCrew === "2" ? "bg-(--white)" : "bg-(--blue-light)/70")
           }
         ></li>
@@ -30,7 +30,7 @@ function CrewPagination({ onClick, currentCrew }) {
           data-id="3"
           onClick={onClick}
           className={
-            "cursor-pointer size-2.5 rounded-full " +
+            "cursor-pointer size-2.5 xl:size-3 rounded-full " +
             (currentCrew === "3" ? "bg-(--white)" : "bg-(--blue-light)/70")
           }
         ></li>

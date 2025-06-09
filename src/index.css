@@ -17,7 +17,7 @@
 
 @layer base {
   html {
-    font-size: clamp(0.8em, 0.4em + 1.5vw, 1.4em);
+    font-size: clamp(0.8em, 0.4em + 1.2vw, 1.4em);
   }
 
   body {
@@ -28,26 +28,59 @@
 }
 
 @layer components {
+  /*MAIN BG*/
   .home-bg {
     @apply bg-[url("/home/background-home-mobile.jpg")] md:bg-[url("/home/background-home-tablet.jpg")] lg:bg-[url("/home/background-home-desktop.jpg")] min-h-screen bg-cover bg-no-repeat bg-center  bg-(--blue-dark);
   }
   .crew-bg {
-    @apply bg-[url("/crew/background-crew-mobile.jpg")] md:bg-[url("/crew/background-crew-tablet.jpg")] lg:bg-[url("/crew/background-crew-desktop.jpg")] min-h-screen bg-cover bg-no-repeat  bg-(--blue-dark);
+    @apply bg-[url("/crew/background-crew-mobile.jpg")] md:bg-[url("/crew/background-crew-tablet.jpg")] lg:bg-[url("/crew/background-crew-desktop.jpg")] min-h-screen bg-cover bg-no-repeat bg-center  bg-(--blue-dark);
   }
   .dest-bg {
     @apply bg-[url("/destination/background-destination-mobile.jpg")] md:bg-[url("/destination/background-destination-tablet.jpg")] lg:bg-[url("/destination/background-destination-desktop.jpg")] min-h-screen bg-cover bg-no-repeat bg-(--blue-dark);
   }
   .tech-bg {
-    @apply bg-[url("/technology/background-technology-mobile.jpg")] md:bg-[url("/technology/background-technology-tablet.jpg")] lg:bg-[url("/technology/background-technology-desktop.jpg")] min-h-screen bg-cover bg-no-repeat  bg-(--blue-dark);
+    @apply bg-[url("/technology/background-technology-mobile.jpg")] md:bg-[url("/technology/background-technology-tablet.jpg")] lg:bg-[url("/technology/background-technology-desktop.jpg")] min-h-screen bg-cover bg-no-repeat bg-center bg-(--blue-dark);
   }
+
+  /*NAVIGATION*/
   .navigation {
-    @apply flex justify-between items-center w-full p-5;
+    @apply flex justify-between items-center w-full pl-8 pt-6;
+  }
+  .navigation ul::before {
+    content: "";
+    width: 42%;
+    height: 0.02rem;
+    position: absolute;
+    background: var(--blue-light);
+    opacity: 0.3;
+    top: 50%;
+    left: -40%;
+    @apply lg:w-[60%] lg:-left-[56%]  xl:w-[75%] xl:-left-[75%];
+  }
+
+  .navigation-list {
+    @apply text-(--white)/70 flex gap-5 uppercase tracking-widest font-(family-name:--fn-barlow) md:bg-(--blue-light)/10 md:h-full md:p-5 md:relative md:pl-15 xl:pl-30;
+  }
+
+  .navigation-list li {
+    position: relative;
+  }
+  .navigation-list .active-page::after {
+    content: "";
+    width: 90%;
+    height: 0.3rem;
+    background-color: var(--white);
+    position: absolute;
+    left: 50%;
+    bottom: -1.3rem;
+    transform: translateX(-50%);
   }
 
   .page-container {
-    @apply flex flex-col items-center;
+    @apply flex flex-col items-center lg:justify-center;
   }
 
+  /*DESTINATION ROUTE*/
   .dest-description {
     @apply text-(--blue-light) uppercase tracking-[0.2em] text-[1rem] font-(family-name:--fn-barlow) font-extralight;
   }
@@ -71,24 +104,25 @@
     border-radius: 0.3rem;
   }
 
+  /*CREW ROUTE*/
   .crew-picture {
-    @apply px-15 py-5 relative z-1 overflow-hidden;
+    @apply px-15 py-5 relative z-1 overflow-hidden md:max-w-[35rem] md:py-0 lg:max-w-full lg:p-0;
   }
   .blur-bg {
     background: var(--blue-dark);
     width: 80%;
     height: 2rem;
     position: absolute;
-    bottom: 0.4rem;
+    bottom: -1rem;
     left: 50%;
     transform: translateX(-50%);
-    @apply blur-sm brightness-160;
+    @apply blur-sm brightness-160 md:w-0 md:h-0 lg:w-[100%] lg:h-[2rem] lg:-bottom-[1.6rem];
   }
 }
 
 @layer utilities {
   .site-padding {
-    @apply p-5;
+    @apply p-5 md:pb-0 lg:p-10;
   }
 
   .bg-backdrop-filter {
