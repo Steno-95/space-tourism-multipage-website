@@ -59,20 +59,8 @@
     position: relative;
   }
   .active-page {
-    @apply text-white;
+    @apply text-(--white);
   }
-  .navigation-list li.active-page::after {
-    content: "";
-    width: 90%;
-    height: 0.3rem;
-    background-color: var(--white);
-    position: absolute;
-    left: 50%;
-    bottom: -0.8rem;
-    transform: translateX(-50%);
-    z-index: 5;
-  }
-
   .navigation-list li:hover {
     @apply text-(--white)/90;
   }
@@ -80,13 +68,24 @@
     content: "";
     width: 90%;
     height: 0.3rem;
-    background-color: var(--white);
+    background: var(--white);
     position: absolute;
     left: 50%;
     bottom: -0.8rem;
     opacity: 0.5;
     transform: translateX(-50%);
     z-index: 3;
+  }
+  li.active-page::after {
+    content: "";
+    width: 90%;
+    height: 0.3rem;
+    background: var(--white);
+    position: absolute;
+    left: 50%;
+    bottom: -0.8rem;
+    transform: translateX(-50%);
+    z-index: 5;
   }
 
   .page-container {
@@ -103,7 +102,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: var(--color-white);
+    background: var(--white);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -120,6 +119,29 @@
   }
   .dest-value {
     @apply uppercase text-(--white) text-[1.8rem] font-(family-name:--fn-bellefair) lg:text-[1.2rem];
+  }
+
+  .dest-navigation {
+    @apply flex text-(--blue-light) uppercase gap-8 tracking-[0.2em] font-(family-name:--fn-barlow) font-light;
+  }
+
+  .dest-navigation li {
+    @apply relative;
+  }
+  .dest-navigation li:hover {
+    @apply text-white/80;
+  }
+  .dest-navigation li:hover::after {
+    content: "";
+    width: 80%;
+    height: 0.2rem;
+    background-color: var(--white);
+    position: absolute;
+    left: 49%;
+    transform: translateX(-51%);
+    bottom: -50%;
+    opacity: 0.8;
+    border-radius: 0.3rem;
   }
 
   .active-dest {
@@ -142,6 +164,15 @@
   .crew-picture {
     @apply px-15 py-5 relative z-1 overflow-hidden md:max-w-[35rem] md:py-0 lg:max-w-full lg:p-0;
   }
+  .crew-navigation {
+    @apply flex gap-4;
+  }
+  .crew-navigation li {
+    @apply cursor-pointer size-2.5 xl:size-3 rounded-full bg-(--blue-light)/70;
+  }
+  .crew-navigation li:hover {
+    @apply bg-(--white)/80;
+  }
   .blur-bg {
     background: var(--blue-dark);
     width: 80%;
@@ -151,6 +182,16 @@
     left: 50%;
     transform: translateX(-50%);
     @apply blur-sm brightness-160 md:w-0 md:h-0 lg:w-[100%] lg:h-[2rem] lg:-bottom-[1.6rem];
+  }
+
+  /* TECHNOLOGY ROUTE */
+
+  .tech-page {
+    @apply rounded-full border-1 border-white/10 text-[1.3rem] text-(--white);
+  }
+
+  .tech-page:hover {
+    @apply border-white/40;
   }
 }
 
