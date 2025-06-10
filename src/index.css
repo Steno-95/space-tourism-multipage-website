@@ -56,13 +56,10 @@
   }
 
   .navigation-list li {
-    position: relative;
+    @apply relative hover:text-(--white)/90;
   }
   .active-page {
     @apply text-(--white);
-  }
-  .navigation-list li:hover {
-    @apply text-(--white)/90;
   }
   .navigation-list li:hover::after {
     content: "";
@@ -90,6 +87,24 @@
 
   .page-container {
     @apply flex flex-col items-center lg:justify-center;
+  }
+
+  .mobile-nav {
+    @apply flex flex-col gap-5 tracking-widest;
+  }
+  .mobile-nav li {
+    @apply text-(--white)/70 uppercase hover:text-(--white) relative;
+  }
+  .mobile-nav li:hover::after,
+  .mobile-nav li:focus-within::after {
+    content: "";
+    height: 90%;
+    width: 0.2rem;
+    background: var(--white);
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+    z-index: 500;
   }
 
   /* HOME ROUTE */
@@ -126,10 +141,7 @@
   }
 
   .dest-navigation li {
-    @apply relative;
-  }
-  .dest-navigation li:hover {
-    @apply text-white/80;
+    @apply relative hover:text-(--white)/80;
   }
   .dest-navigation li:hover::after {
     content: "";
@@ -168,11 +180,9 @@
     @apply flex gap-4;
   }
   .crew-navigation li {
-    @apply cursor-pointer size-2.5 xl:size-3 rounded-full bg-(--blue-light)/70;
+    @apply cursor-pointer size-2.5 xl:size-3 rounded-full bg-(--blue-light)/70 hover:bg-(--white)/80;
   }
-  .crew-navigation li:hover {
-    @apply bg-(--white)/80;
-  }
+
   .blur-bg {
     background: var(--blue-dark);
     width: 80%;
@@ -187,14 +197,9 @@
   /* TECHNOLOGY ROUTE */
 
   .tech-page {
-    @apply rounded-full border-1 border-white/10 text-[1.3rem] text-(--white);
-  }
-
-  .tech-page:hover {
-    @apply border-white/40;
+    @apply rounded-full border-1 border-white/10 text-[1.3rem] text-(--white) hover:border-white/40;
   }
 }
-
 @layer utilities {
   .site-padding {
     @apply p-5 lg:p-10;
