@@ -1,6 +1,6 @@
 function DestinationNav({ onClick, currentDest }) {
   return (
-    <ul className="flex text-(--blue-light) uppercase gap-8 tracking-[0.2em] font-(family-name:--fn-barlow) font-light cursor-pointer">
+    <ul className="dest-navigation">
       <li
         data-id="0"
         onClick={onClick}

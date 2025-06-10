@@ -3,10 +3,8 @@ function TechnologyNav({ currentTech, handleClick }) {
     <ul className="flex gap-5 items-center justify-center text-center font-(family-name:--fn-bellefair) lg:flex-col">
       <li
         className={
-          " rounded-full border-1 border-white/10 text-[1.3rem] " +
-          (currentTech === "0"
-            ? " bg-(--white) text-(--blue-dark)"
-            : "text-(--white)")
+          "tech-page " +
+          (currentTech === "0" ? " bg-(--white) text-(--blue-dark)" : "")
         }
       >
         <button
@@ -19,10 +17,8 @@ function TechnologyNav({ currentTech, handleClick }) {
       </li>
       <li
         className={
-          " rounded-full border-1 border-white/10 text-[1.3rem] " +
-          (currentTech === "1"
-            ? " bg-(--white) text-(--blue-dark)"
-            : "text-(--white)")
+          "tech-page " +
+          (currentTech === "1" ? " bg-(--white) text-(--blue-dark)" : "")
         }
       >
         <button
@@ -35,10 +31,8 @@ function TechnologyNav({ currentTech, handleClick }) {
       </li>
       <li
         className={
-          " rounded-full border-1 border-white/10 text-[1.3rem] " +
-          (currentTech === "2"
-            ? " bg-(--white) text-(--blue-dark)"
-            : "text-(--white)")
+          "tech-page " +
+          (currentTech === "2" ? " bg-(--white) text-(--blue-dark)" : "")
         }
       >
         <button
