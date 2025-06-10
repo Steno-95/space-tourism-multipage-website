@@ -2,17 +2,23 @@ import { Link, useOutletContext } from "react-router";
 import useScreenSize from "../hooks/useScreenSize";
 
 function Navigation({ style }) {
-  const isDesktop = useScreenSize();
+  const isDesktop = useScreenSize("768px");
+  const isLaptop = useScreenSize("1440px");
+
   const path = window.location.pathname;
   const { openMenu, isOpen } = useOutletContext();
   return (
     <nav className={"navigation " + style}>
-      <figure className="size-10">
+      <figure className="w-10 md:w-40  place-content-center md:mr-5">
         <img
           src="/shared/logo.svg"
           alt="website logo, blue star inside a white circle"
+          className="md:size-10"
         />
       </figure>
+      {isLaptop && (
+        <div className="bg-(--blue-light)/30 w-[90%] h-0.5 -mr-5"></div>
+      )}
       {isDesktop && (
         <ul className="navigation-list">
           <li className={path === "/" || path === "/home" ? "active-page" : ""}>
