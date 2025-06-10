@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 
-function useScreenSize() {
+function useScreenSize(screenSize) {
   const [isDesktopSize, setIsDesktopSize] = useState(null);
 
   useEffect(() => {
-    const matchMedia = window.matchMedia("screen and (min-width: 768px");
+    const matchMedia = window.matchMedia(
+      `screen and (min-width: ${screenSize}`
+    );
     setIsDesktopSize(matchMedia.matches);
 
     function updateDesktopSize(e) {
@@ -13,7 +15,7 @@ function useScreenSize() {
 
     matchMedia.addEventListener("change", updateDesktopSize);
     return () => matchMedia.removeEventListener("change", updateDesktopSize);
-  }, []);
+  }, [screenSize]);
   return isDesktopSize;
 }
 
