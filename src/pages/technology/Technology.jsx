@@ -13,11 +13,11 @@ function Technology() {
       setCurrentTech(e.currentTarget.getAttribute("data-id"));
   }
   return (
-    <div className="tech-bg">
+    <div className="tech-bg main-bg">
       <div className="bg-backdrop-filter min-h-screen">
         <Navigation />
-        <main className="page-container gap-5 site-padding lg:items-start overflow-hidden">
-          <PageTitle number={"03"} title={"space launch 101"} />
+        <main className="page-container gap-5 site-padding md:items-start overflow-hidden pl-0!">
+          <PageTitle number={"03"} title={"space launch 101"} style="pl-20" />
           <section className="page-container gap-5 lg:flex-row lg:min-w-screen lg:pl-25 lg:gap-8 2xl:pl-10">
             <picture className="w-screen portrait:h-[18rem]  md:h-full overflow-hidden lg:order-1 lg:w-auto">
               <source
@@ -27,7 +27,7 @@ function Technology() {
               <img
                 src={technology[currentTech].images.landscape}
                 alt={technology[currentTech].name + " photo"}
-                className="portrait:-translate-y-1/3 md:translate-y-0 w-full lg:w-auto "
+                className="portrait:-translate-y-1/3 md:translate-y-0 w-screen lg:w-auto "
               />
             </picture>
             <TechnologyNav

@@ -13,15 +13,15 @@ function Crew() {
       setCurrentCrew(e.currentTarget.getAttribute("data-id"));
   }
   return (
-    <div className="crew-bg">
+    <div className="crew-bg main-bg">
       <div className="bg-backdrop-filter min-h-screen">
-        <Navigation style={""} />
-        <main className="page-container site-padding md:pb-0! lg:p-10!">
-          <section className="lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_4fr_1fr] lg:pl-20 flex flex-col items-center max-h-screen">
+        <Navigation />
+        <main className="page-container site-padding ">
+          <section className="lg:grid lg:grid-cols-2 lg:grid-rows-[1fr_4fr_1fr] lg:pl-10 flex flex-col items-center max-h-screen">
             <PageTitle
               number={"02"}
               title={"meet your crew"}
-              style="md:self-start pl-0! lg:col-start-1 lg:col-end-2 pb-10"
+              style="md:self-start lg:col-start-1 lg:col-end-2 pb-10"
             />
             {/* <section className="flex flex-col items-center xl:flex-row xl:max-w-[56rem] xl:pl-8 xl:gap-10"> */}
             <div className="flex flex-col items-center text-center mb-8 lg:text-start lg:items-start basis-3/7 lg:row-start-2 lg:row-end-3 lg:place-content-center">
