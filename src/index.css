@@ -139,13 +139,14 @@
   }
 
   .dest-navigation {
-    @apply flex text-(--blue-light) uppercase gap-8 tracking-[0.2em] font-(family-name:--fn-barlow) font-light;
+    @apply flex text-(--blue-light) gap-8 tracking-[0.2em] font-(family-name:--fn-barlow) font-light;
   }
 
   .dest-navigation li {
     @apply relative hover:text-(--white)/80;
   }
-  .dest-navigation li:hover::after {
+  .dest-navigation li:hover::after,
+  .dest-navigation li:focus-within::after {
     content: "";
     width: 80%;
     height: 0.2rem;
