@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router";
-import useScreenSize from "./hooks/useScreenSize";
+import useScreenSize from "../hooks/useScreenSize";
 
 function AppLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
