@@ -183,7 +183,7 @@
     @apply flex gap-4;
   }
   .crew-navigation li {
-    @apply cursor-pointer size-2.5 xl:size-3 rounded-full bg-(--blue-light)/70 hover:bg-(--white)/80;
+    @apply cursor-pointer size-2.5 xl:size-3 rounded-full bg-(--blue-light)/70 hover:bg-(--white)/80 focus-within:bg-(--white)/80;
   }
 
   .blur-bg {
