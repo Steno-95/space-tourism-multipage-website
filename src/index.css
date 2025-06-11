@@ -61,7 +61,8 @@
   .active-page {
     @apply text-(--white);
   }
-  .navigation-list li:hover::after {
+  .navigation-list li:hover::after,
+  .navigation-list li:focus-within::after {
     content: "";
     width: 90%;
     height: 0.3rem;
