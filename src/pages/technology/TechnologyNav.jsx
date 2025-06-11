@@ -8,9 +8,11 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
-          className="2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1"
+          type="button"
+          className="tech-btn"
           onClick={handleClick}
           data-id="0"
+          aria-label="page 1"
         >
           1
         </button>
@@ -22,9 +24,11 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
-          className="2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1"
+          type="button"
+          className="tech-btn"
           onClick={handleClick}
           data-id="1"
+          aria-label="page 2"
         >
           2
         </button>
@@ -36,9 +40,11 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
-          className="2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1"
+          type="button"
+          className="tech-btn"
           onClick={handleClick}
           data-id="2"
+          aria-label="page 3"
         >
           3
         </button>

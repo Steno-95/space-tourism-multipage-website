@@ -8,7 +8,7 @@ function Navigation({ style }) {
   const path = window.location.pathname;
   const { openMenu, isOpen } = useOutletContext();
   return (
-    <nav className={"navigation " + style}>
+    <nav className={"navigation " + style} aria-label="navigation">
       <figure className="w-10 md:w-40  place-content-center md:mr-5">
         <img
           src="/shared/logo.svg"
@@ -22,26 +22,47 @@ function Navigation({ style }) {
       {isDesktop && (
         <ul className="navigation-list">
           <li className={path === "/" || path === "/home" ? "active-page" : ""}>
-            <Link to="/">
-              {" "}
-              <span className="font-semibold text-(--white) mr-2">00</span>home
+            <Link to="/" tabIndex={-1}>
+              <button
+                type="button"
+                className="focus:border-none focus:outline-none uppercase cursor-pointer"
+              >
+                <span className="font-semibold text-(--white) mr-2">00</span>
+                home
+              </button>
             </Link>
           </li>
           <li className={path === "/destination" ? "active-page" : ""}>
-            <Link to="/destination">
-              <span className="font-semibold text-(--white) mr-2">01</span>
-              destination
+            <Link tabIndex={-1} to="/destination">
+              <button
+                type="button"
+                className="focus:border-none focus:outline-none uppercase cursor-pointer"
+              >
+                <span className="font-semibold text-(--white) mr-2">01</span>
+                destination
+              </button>
             </Link>
           </li>
           <li className={path === "/crew" ? "active-page" : ""}>
-            <Link to="/crew">
-              <span className="font-semibold text-(--white) mr-2">02</span>crew
+            <Link tabIndex={-1} to="/crew">
+              <button
+                type="button"
+                className="focus:border-none focus:outline-none uppercase cursor-pointer"
+              >
+                <span className="font-semibold text-(--white) mr-2">02</span>
+                crew
+              </button>
             </Link>
           </li>
           <li className={path === "/technology" ? "active-page" : ""}>
-            <Link to="/technology">
-              <span className="font-semibold text-(--white) mr-2">03</span>
-              technology
+            <Link tabIndex={-1} to="/technology">
+              <button
+                type="button"
+                className="focus:border-none focus:outline-none uppercase cursor-pointer"
+              >
+                <span className="font-semibold text-(--white) mr-2">03</span>
+                technology
+              </button>
             </Link>
           </li>
         </ul>
@@ -51,6 +72,7 @@ function Navigation({ style }) {
           className="size-10 cursor-pointer"
           aria-label="button to open mobile navigation"
           onClick={openMenu}
+          type="button"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21">
             <g fill="#D0D6F9" fillRule="evenodd">

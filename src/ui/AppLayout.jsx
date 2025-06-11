@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet } from "react-router";
-import useScreenSize from "./hooks/useScreenSize";
+import useScreenSize from "../hooks/useScreenSize";
 
 function AppLayout() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -13,10 +13,15 @@ function AppLayout() {
     <main>
       <Outlet context={contextMobileNav} />
       {mobileMenuOpen && !isDesktopSize && (
-        <nav className="fixed right-0 top-0 min-h-screen flex flex-col backdrop-blur-md w-[70%] py-8 px-6 gap-20">
+        <nav
+          className="fixed right-0 top-0 min-h-screen flex flex-col backdrop-blur-md w-[70%] py-8 px-6 gap-20 z-5000 bg-(--blue-dark)/50"
+          aria-label="mobile navigation"
+        >
           <button
+            type="button"
             className="self-end cursor-pointer mr-2"
             onClick={() => setMobileMenuOpen(false)}
+            aria-label="close the mobile navigation menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
               <g fill="#D0D6F9" fillRule="evenodd">
@@ -25,23 +30,23 @@ function AppLayout() {
               </g>
             </svg>
           </button>
-          <ul className="flex flex-col gap-5 tracking-widest">
-            <li className="text-white/70 uppercase backdrop-contast-200">
+          <ul className="mobile-nav">
+            <li>
               <Link to={"/"}>
                 <span className="text-white mr-3">00</span>home
               </Link>
             </li>
-            <li className="text-white/70 uppercase backdrop-contast-200">
+            <li>
               <Link to={"/destination"}>
                 <span className="text-white mr-3">01</span>destination
               </Link>
             </li>
-            <li className="text-white/70 uppercase backdrop-contast-200">
+            <li>
               <Link to={"/crew"}>
                 <span className="text-white mr-3">02</span>crew
               </Link>
             </li>
-            <li className="text-white/70 uppercase backdrop-contast-200">
+            <li>
               <Link to={"/technology"}>
                 <span className="text-white mr-3">03</span>technology
               </Link>

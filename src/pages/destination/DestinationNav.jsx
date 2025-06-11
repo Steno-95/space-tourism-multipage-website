@@ -8,7 +8,12 @@ function DestinationNav({ onClick, currentDest }) {
           "cursor-pointer " + (currentDest === "0" ? "active-dest" : "")
         }
       >
-        moon
+        <button
+          type="button"
+          className="focus:border-none focus:outline-none uppercase"
+        >
+          moon
+        </button>
       </li>
       <li
         data-id="1"
@@ -17,7 +22,12 @@ function DestinationNav({ onClick, currentDest }) {
           "cursor-pointer " + (currentDest === "1" ? "active-dest" : "")
         }
       >
-        mars
+        <button
+          type="button"
+          className="focus:border-none focus:outline-none uppercase"
+        >
+          mars
+        </button>
       </li>
       <li
         data-id="2"
@@ -26,7 +36,12 @@ function DestinationNav({ onClick, currentDest }) {
           "cursor-pointer " + (currentDest === "2" ? "active-dest" : "")
         }
       >
-        europa
+        <button
+          type="button"
+          className="focus:border-none focus:outline-none uppercase"
+        >
+          europa
+        </button>
       </li>
       <li
         data-id="3"
@@ -35,7 +50,12 @@ function DestinationNav({ onClick, currentDest }) {
           "cursor-pointer " + (currentDest === "3" ? "active-dest" : "")
         }
       >
-        titan
+        <button
+          type="button"
+          className="focus:border-none focus:outline-none uppercase"
+        >
+          titan
+        </button>
       </li>
     </ul>
   );

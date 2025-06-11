@@ -13,10 +13,10 @@ function Destination() {
       setCurrentDest(e.currentTarget.getAttribute("data-id"));
   }
   return (
-    <div className="dest-bg main-bg">
+    <section className="dest-bg main-bg">
       <div className="bg-backdrop-filter min-h-screen">
         <Navigation />
-        <main className="page-container gap-5 site-padding">
+        <article className="page-container gap-5 site-padding">
           <section className="flex flex-col items-center lg:grid lg:grid-cols-[1.2fr_1fr] grid-rows-[fit-content_1fr_1fr_1fr] lg:pl-10">
             <PageTitle
               number={"01"}
@@ -34,7 +34,7 @@ function Destination() {
                 className="size-45 md:size-70 lg:size-auto"
               />
             </picture>
-            <div className="flex flex-col items-center gap-5 lg:items-start">
+            <article className="flex flex-col items-center gap-5 lg:items-start">
               <DestinationNav onClick={handleClick} currentDest={currentDest} />
               <article className="text-center md:max-w-[38rem] lg:text-start">
                 <h2 className="text-(--white) uppercase text-[5rem] font-(family-name:--fn-bellefair) md:text-[5.5rem] lg:text-[3rem]">
@@ -44,7 +44,7 @@ function Destination() {
                   {destinations[currentDest].description}
                 </p>
               </article>
-            </div>
+            </article>
             <aside className=" border-t-2 border-t-(--blue-light)/20 w-full text-center flex flex-col gap-5 pt-5 md:flex-row md:items-center md:justify-around lg:justify-start lg:text-start lg:gap-15">
               <div>
                 <h3 className="dest-description">Avg. distance</h3>
@@ -61,9 +61,9 @@ function Destination() {
               </div>
             </aside>
           </section>
-        </main>
+        </article>
       </div>
-    </div>
+    </section>
   );
 }
 

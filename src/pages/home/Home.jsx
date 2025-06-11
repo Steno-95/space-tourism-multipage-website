@@ -2,9 +2,9 @@ import Navigation from "../../ui/Navigation";
 
 function Home() {
   return (
-    <article className="home-bg main-bg ">
+    <section className="home-bg main-bg ">
       <Navigation />
-      <main className="flex flex-col gap-25 items-center site-padding lg:max-w-[60rem] xl:max-w-[80rem] xl:mx-auto lg:min-h-[80vh] lg:flex-row lg:items-end lg:justify-between lg:px-20!">
+      <section className="flex flex-col gap-25 items-center site-padding lg:max-w-[60rem] xl:max-w-[80rem] xl:mx-auto lg:min-h-[80vh] lg:flex-row lg:items-end lg:justify-between lg:px-20!">
         <div className="flex flex-col items-center lg:items-start">
           <span className="text-(--blue-light) uppercase tracking-[.2em] font-(family-name:--fn-barlow)">
             So, you want to travel to
@@ -19,9 +19,11 @@ function Home() {
             world experience!
           </p>
         </div>
-        <button className="home-btn">Explore</button>
-      </main>
-    </article>
+        <button type="button" className="home-btn">
+          Explore
+        </button>
+      </section>
+    </section>
   );
 }
 
