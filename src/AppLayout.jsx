@@ -13,10 +13,15 @@ function AppLayout() {
     <main>
       <Outlet context={contextMobileNav} />
       {mobileMenuOpen && !isDesktopSize && (
-        <nav className="fixed right-0 top-0 min-h-screen flex flex-col backdrop-blur-md w-[70%] py-8 px-6 gap-20 z-5000 bg-(--blue-dark)/50">
+        <nav
+          className="fixed right-0 top-0 min-h-screen flex flex-col backdrop-blur-md w-[70%] py-8 px-6 gap-20 z-5000 bg-(--blue-dark)/50"
+          aria-label="mobile navigation"
+        >
           <button
+            type="button"
             className="self-end cursor-pointer mr-2"
             onClick={() => setMobileMenuOpen(false)}
+            aria-label="close the mobile navigation menu"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21">
               <g fill="#D0D6F9" fillRule="evenodd">
