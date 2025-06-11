@@ -49,5 +49,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://github.com/Steno-95)
+- Website - [Stefano Lezzi](https://github.com/Steno-95)
 - Frontend Mentor - [@Steno-95](https://www.frontendmentor.io/profile/Steno-95)
