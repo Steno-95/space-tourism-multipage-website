@@ -8,6 +8,7 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
+          type="button"
           className="tech-btn"
           onClick={handleClick}
           data-id="0"
@@ -23,6 +24,7 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
+          type="button"
           className="tech-btn"
           onClick={handleClick}
           data-id="1"
@@ -38,6 +40,7 @@ function TechnologyNav({ currentTech, handleClick }) {
         }
       >
         <button
+          type="button"
           className="tech-btn"
           onClick={handleClick}
           data-id="2"
