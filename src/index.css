@@ -198,7 +198,11 @@
   /* TECHNOLOGY ROUTE */
 
   .tech-page {
-    @apply rounded-full border-1 border-white/10 text-[1.3rem] text-(--white) hover:border-white/40;
+    @apply rounded-full border-1 border-white/10 text-[1.3rem] text-(--white) hover:border-white/40 focus-within:border-white/40;
+  }
+
+  .tech-btn {
+    @apply 2xl:size-20 2xl:text-[1.5rem] cursor-pointer size-10 pt-1 focus:border-none focus:outline-none;
   }
 }
 @layer utilities {
